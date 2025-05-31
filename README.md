@@ -1,162 +1,154 @@
-🧮 FormulaValider - System Walidacji Wzorów Σ/Δ
-🎯 Czym jest FormulaValider?
-FormulaValider to system, który automatycznie sprawdza poprawność wzorów matematyczno-fizycznych na wielu poziomach. 
-To nie jest zwykły kalkulator - to inteligentny walidator, który "rozumie" strukturę wzorów i może wykryć błędy, zanim je użyjesz!
+🧮 FormulaValider - Σ/Δ Formula Validation System
+🎯 What is FormulaValider?
+FormulaValider is a system that automatically checks the correctness of mathematical and physical formulas on many levels.
 
-🔬 Dlaczego to ważne?
-Wyobraź sobie, że:
+It's not an ordinary calculator - it's an intelligent validator that "understands" the structure of formulas and can detect errors before you use them!
 
-Piszesz pracę naukową i chcesz sprawdzić, czy wzory są poprawnie zapisane
-Uczysz się fizyki i nie jesteś pewien składni matematycznej
-Tworzysz program naukowy i potrzebujesz walidacji formuł
-Chcesz automatycznie sprawdzić setki wzorów w bazie danych
-FormulaValider rozwiązuje te problemy! 🚀
+🔬 Why is it important?
+Imagine that:
 
-🏗️ Architektura Σ/Δ (Sigma/Delta)
-System działa w dwóch warstwach walidacji:
+You are writing a scientific paper and you want to check if the formulas are written correctly
+You are learning physics and you are not sure about the mathematical syntax
+You are creating a scientific program and you need to validate formulas
+You want to automatically check hundreds of formulas in a database
+FormulaValider solves these problems! 🚀
 
-🔤 [Σ] SIGMA - Składnia Matematyczna
-✅ Poprawne:          ❌ Błędne:
-F = m * a             F = m *
-E = m * c**2          E == m * c²  
-v = s / t             v s / t
-P = U * I             P = U * (I + R
+🏗️ Σ/Δ (Sigma/Delta) Architecture
+The system works in two layers of validation:
 
+🔤 [Σ] SIGMA - Mathematical Syntax
+✅ Correct: ❌ Incorrect:
+F = m * a F = m *
+E = m * c**2 E == m * c²
+v = s / t v s / t
+P = U * I P = U * (I + R
 
-Co sprawdza:
+What it checks:
 
-Czy wzór zawiera znak równości =?
-Czy lewa i prawa strona są matematycznie poprawne?
-Czy nie ma błędów składniowych (niezamknięte nawiasy, błędne operatory)?
-⚖️ [Δ] DELTA - Spójność Jednostek
-✅ Poprawne jednostki:
-F = m * a  →  [N] = [kg] × [m/s²]  ✓
+Does the formula contain the equal sign =?
+Are the left and right sides mathematically correct?
+Are there no syntactic errors (unclosed brackets, incorrect operators)?
+⚖️ [Δ] DELTA - Unit Consistency
+✅ Correct units:
+F = m * a → [N] = [kg] × [m/s²] ✓
 
-❌ Błędne jednostki:
-F = m * v  →  [N] ≠ [kg] × [m/s]   ✗
+❌ Incorrect units:
+F = m * v → [N] ≠ [kg] × [m/s] ✗
 
-Co sprawdza:
+What it checks:
 
-Czy wszystkie symbole mają zdefiniowane jednostki?
-Czy jednostki po obu stronach równania są spójne?
-Podstawa dla przyszłej pełnej analizy wymiarowej
-🚀 Przyszłe rozszerzenia (w planach):
-🧠 [Λ] LAMBDA - Semantyka Symboli
-Znaczenie symboli (masa, energia, siła...)
-Typ wielkości (skalarna, wektorowa, tensorowa)
-Kontekst dziedziny nauki
-🌍 [Π] PI - Zgodność z Rzeczywistością
-Weryfikacja z bazą wiedzy fizycznej
-Sprawdzenie granic stosowalności wzoru
-Integracja z systemami AI/AGI
-💻 Jak używać programu?
-1. Uruchom program:
+Do all symbols have defined units?
+Are the units on both sides of the equation consistent?
+
+Basis for future full dimensional analysis
+🚀 Future extensions (planned):
+🧠 [Λ] LAMBDA - Symbol Semantics
+Meaning of symbols (mass, energy, force...)
+Type of quantity (scalar, vector, tensor)
+Context of the scientific field
+🌍 [Π] PI - Conformity with Reality
+Verification with the physical knowledge base
+Checking the limits of applicability of the formula
+Integration with AI/AGI systems
+💻 How to use the program?
+1. Run the program:
 python formulavalider.py
 
+2. Select an option from menu:
+╔════════════════════════════════════════════════════════════════════╗
+║ FORMULAVALIDER ║
+║ Validation System Σ/Δ ║
+╠══════════════════════════════════════════════════════════════════╣
+║ 1. Check your own pattern ║
+║ 2. Select a pattern from the ready list ║
+║ 3. System information Σ/Δ ║
+║ 4. Create sample formulas.json ║
+║ 5. Output ║
+╚══════════════════════════════════════════════════════════════╝
 
-2. Wybierz opcję z menu:
-╔════════════════════════════════════════════════╗
-║                FORMULAVALIDER                  ║
-║            System Walidacji Σ/Δ               ║
-╠════════════════════════════════════════════════╣
-║  1. Sprawdź własny wzór                        ║
-║  2. Wybierz wzór z gotowej listy               ║
-║  3. Informacje o systemie Σ/Δ                 ║
-║  4. Utwórz przykładowy formulas.json           ║
-║  5. Wyjście                                    ║
-╚════════════════════════════════════════════════╝
+3. Example of checking the formula:
+Enter the formula: F = m * a
+Do you want to add units? (y/n): t
 
-3. Przykład sprawdzania wzoru:
-Podaj wzór: F = m * a
-Czy chcesz dodać jednostki? (t/n): t
+Symbol and unit: F N
+Symbol and unit: m kg
+Symbol and unit: a m/s**2
+Symbol and unit: [Enter]
 
-Symbol i jednostka: F N
-Symbol i jednostka: m kg  
-Symbol i jednostka: a m/s**2
-Symbol i jednostka: [Enter]
-
-==================================================
-WALIDACJA WZORU: F = m * a
-Opis: Druga zasada dynamiki Newtona
-==================================================
-[Σ] ✓ Składnia poprawna (Σ): F = m * a
-[Δ] ✓ Jednostki zdefiniowane (Δ): F [N]
+=====================================================
+FORMULA VALIDATION: F = m * a
+Description: Newton's Second Law of Motion
+= ... [N]
 
 ──────────────────────────────────
-🎉 WZÓR POPRAWNY!
-──────────────────────────────────
+🎉 CORRECT PATTERN!
+───────────────────────────────────
 
-📚 Przykłady wzorów do testowania:
-✅ Wzory poprawne:
-E = m * c**2           # Einstein
-F = m * a              # Newton  
-P = U * I              # Prawo Ohma
-v = s / t              # Prędkość
-Ek = (1/2) * m * v**2  # Energia kinetyczna
-p = m * v              # Pęd
-W = F * s              # Praca
+📚 Examples of patterns to test:
+✅ Patterns correct:
+E = m * c**2 # Einstein
+F = m * a # Newton
+P = U * I # Ohm's Law
+v = s / t # Velocity
+Ek = (1/2) * m * v**2 # Kinetic energy
+p = m * v # Momentum
+W = F * s # Work
 
-❌ Wzory błędne (do testów):
-F = m *                # Niekompletne
-E == m * c**2          # Podwójny znak równości
-F m * a                # Brak znaku równości
-lambda = h / p         # 'lambda' to słowo kluczowe Pythona
-F = m * (a + b         # Niezamknięty nawias
+❌ Incorrect formulas (for testing):
+F = m * # Incomplete
+E == m * c**2 # Double equal sign
+F m * a # No equal sign
+lambda = h / p # 'lambda' is a Python keyword
+F = m * (a + b # Unclosed parenthesis
 
-⚠️ Ważne ograniczenia:
-🚫 Unikaj słów kluczowych Pythona:
-❌ Błędne:        ✅ Użyj zamiast:
-lambda = h / p    →   L = h / p
-if = m * a        →   force = m * a  
-for = F * r       →   torque = F * r
-class = C         →   capacitance = C
+⚠️ Important restrictions:
+🚫 Avoid Python keywords:
+❌ Incorrect: ✅ Use instead:
+lambda = h / p → L = h / p
+if = m * a → force = m * a
+for = F * r → torque = F * r
+class = C → capacitance = C
 
-📝 Format wzorów:
-Używaj ** do potęgowania (nie ^)
-Używaj * do mnożenia (nie pomijaj)
-Używaj sqrt() do pierwiastka
-Funkcje: sin(), cos(), log(), exp()
-🎯 Dla kogo jest ten program?
-👨‍🎓 Studenci i uczniowie:
-Sprawdzanie wzorów przed egzaminem
-Nauka poprawnego zapisu matematycznego
-Weryfikacja jednostek fizycznych
-👨‍🔬 Naukowcy i inżynierowie:
-Walidacja wzorów w publikacjach
-Sprawdzanie formuł w programach
-Automatyzacja kontroli jakości
-👨‍💻 Programiści:
-Walidacja wzorów w aplikacjach naukowych
-Tworzenie systemów obliczeniowych
-Integracja z bazami danych wzorów
-🤖 Entuzjaści AI:
-Badanie reprezentacji wiedzy matematycznej
-Przygotowanie do systemów AGI
-Eksperymentowanie z walidacją symboliczną
-🔧 Instalacja i kompilacja:
-Wymagania:
+📝 Formula format:
+Use ** for exponentiation (not ^)
+Use * for multiplication (don't skip)
+Use sqrt() for square root
+Functions: sin(), cos(), log(), exp()
+🎯 Who is this program for?
+
+👨‍🎓 Students and pupils:
+Checking formulas before exams
+Learning correct mathematical notation
+Verifying physical units
+👨‍🔬 Scientists and engineers:
+Validating formulas in publications
+Validating formulas in programs
+Automating quality control
+👨‍💻 Programmers:
+Validating formulas in scientific applications
+Creating computational systems
+Integrating with formula databases
+🤖 AI enthusiasts:
+Exploring representations of mathematical knowledge
+Preparation for AGI systems
+Experimenting with symbolic validation
+🔧 Installation and compilation:
+Requirements:
 pip install sympy
 
-Kompilacja do .exe:
+Compiling to .exe:
 pip install pyinstaller
 pyinstaller --onefile formulavalider.py
 
+🌟 Why is FormulaValider a breakthrough?
 
-🌟 Dlaczego FormulaValider to przełom?
-Pierwszy system walidacji wzorów - nic podobnego wcześniej nie istniało
-Modularna architektura - łatwo rozszerzać o nowe warstwy
-Praktyczne zastosowanie - od edukacji po badania naukowe
-Przygotowanie na przyszłość - fundament dla systemów AI/AGI
-Open source - każdy może rozwijać i dostosowywać
-🚀 Wizja przyszłości:
-FormulaValider to dopiero początek! Wyobraź sobie system, który:
+The first formula validation system - nothing like it existed before
+Modular architecture - easily extendable with new layers
+Practical use - from education to research
+Preparing for the future - a foundation for AI/AGI systems
+Open source - anyone can develop and customize
+🚀 Vision of the future:
 
-Automatycznie sprawdza wszystkie wzory w podręcznikach
-Pomaga AI zrozumieć strukturę wiedzy naukowej
-Wykrywa błędy w publikacjach naukowych
-Tłumaczy wzory między różnymi notacjami
-Integruje się z systemami AGI
-To może być fundament nowej nauki o reprezentacji wiedzy matematycznej! 🌟
+FormulaValider is just the beginning! Imagine a system that:
 
-FormulaValider v1.0 - Pierwszy system walidacji wzorów Σ/Δ
-Stworzony z myślą o przyszłości nauki i sztucznej inteligencji 🤖✨
+Automatically checks all
